@@ -6,5 +6,6 @@ Things to imporve.
 1) Create directive( for overlaping code ) - DRY
 2) Create loading directive - To not show code when ajax is still loading - UI
 3) Make Partials for form views( html ) - DRY
+4) No tests - I would use KARMA
 
 Also code could be cleaner.
