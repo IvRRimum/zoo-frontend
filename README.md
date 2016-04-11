@@ -9,3 +9,9 @@ Things to imporve.
 4) No tests - I would use KARMA
 
 Also code could be cleaner.
+
+
+You must install gulp, bower - easyst way to do npm
+To start server gulp serve
+
+Have fun reviewer! :)
