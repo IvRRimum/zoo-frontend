@@ -1,0 +1,35 @@
+<!-- show posts data -->
+<div class="panel panel-default" ng-if="user.signedIn">
+  <div class="panel-heading">Posts</div>
+    <div class="panel-body">
+      <a ng-href="/#/posts/new"><i class="glyphicon glyphicon-plus"></i> Create new Post</a>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Note count</th>
+            <th>Author</th>
+            <th class="action_columns"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="post in posts.posts">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td>{{post.noteCount}}</td>
+            <td>{{post.author}}</td>
+            <td>
+              <a ng-href="/#/posts/edit/{{post.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a data-api-url="{{post.deleteUrl}}" ng-click="posts.deletePost($event)"><i class="glyphicon glyphicon-trash"></i></a>
+              <a ng-href="/#/posts/{{post.id}}"><i class="glyphicon glyphicon-eye-open"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<!-- show posts data -->
+<div class="panel panel-default" ng-if="user.signedIn">
+  <div class="panel-heading">View post: {{postView.post.id}}</div>
+    <div class="panel-body">
+      <div>
+        <b>id: </b> {{postView.post.id}}<br />
+        <b>Title: </b> {{postView.post.title}}<br />
+        <b>Body: </b> {{postView.post.body}}<br />
+        <b>Created at: </b> {{postView.post.createdAt}}<br />
+        <b>Updated at: </b> {{postView.post.updatedAt}}<br />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default" ng-if="user.signedIn && postView.post.notes.length > 0">
+  <div class="panel-heading">Post notes</div>
+    <div class="panel-body">
+      <div ng-repeat="note in postView.post.notes">
+        <b>id: </b> {{note.id}}<br />
+        <b>Text: </b> {{note.text}}<br />
+        <b>Created at: </b> {{note.createdAt}}<br />
+        <b>Updated at: </b> {{note.updatedAt}}<br /><br />
+      </div>
+    </div>
+  </div>
+</div>
